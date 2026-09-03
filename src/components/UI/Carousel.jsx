@@ -1,7 +1,6 @@
-import React from 'react'
-import { useKeenSlider } from 'keen-slider/react'
+import { useKeenSlider } from "keen-slider/react";
 
-import "keen-slider/keen-slider.min.css"
+import "keen-slider/keen-slider.min.css";
 
 const Carousel = ({ loading, skeleton, children }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -15,29 +14,20 @@ const Carousel = ({ loading, skeleton, children }) => {
   });
 
   if (loading) return skeleton;
-  
+
   return (
     <div className="position-relative">
-      <div
-        className="keen-slider"
-        ref={sliderRef}
-      >
+      <div className="keen-slider" ref={sliderRef}>
         {children}
       </div>
-      <button
-        className="owl-prev"
-        onClick={() => instanceRef.current?.prev()}
-      >
+      <button className="owl-prev" onClick={() => instanceRef.current?.prev()}>
         <i className="fa fa-chevron-left"></i>
       </button>
-      <button
-        className="owl-next"
-        onClick={() => instanceRef.current?.next()}
-      >
+      <button className="owl-next" onClick={() => instanceRef.current?.next()}>
         <i className="fa fa-chevron-right"></i>
       </button>
     </div>
   );
-}
+};
 
 export default Carousel;
