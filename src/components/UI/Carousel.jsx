@@ -7,9 +7,9 @@ const Carousel = ({ loading, skeleton, children }) => {
     loop: true,
     slides: { perView: 4, spacing: 16 },
     breakpoints: {
-      "(max-width:1200px)": { slides: { perView: 3, spacing: 16 } },
-      "(max-width:1000px)": { slides: { perView: 2, spacing: 16 } },
-      "(max-width:700px)": { slides: { perView: 1, spacing: 16 } },
+      "(max-width:1199.98px)": { slides: { perView: 3, spacing: 16 } },
+      "(max-width:991.98px)": { slides: { perView: 2, spacing: 16 } },
+      "(max-width:767.98px)": { slides: { perView: 1, spacing: 16 } },
     },
   });
 
