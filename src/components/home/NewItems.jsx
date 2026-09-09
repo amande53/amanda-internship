@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import Carousel from "../UI/Carousel";
-import NewItemsSkeletons from "../UI/NewItemsSkeletons";
+import ItemSkeletons from "../UI/ItemSkeletons";
 import Countdown from "../UI/Countdown";
 
 const NewItems = () => {
@@ -26,7 +26,7 @@ const NewItems = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <Carousel loading={collections.length === 0} skeleton={<NewItemsSkeletons />}>
+          <Carousel loading={collections.length === 0} skeleton={<ItemSkeletons />}>
             {collections.map((collection) => (
               <div className="keen-slider__slide" key={collection.id}>
                 <div className="nft__item">

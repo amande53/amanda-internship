@@ -1,17 +1,17 @@
 import React from "react";
 import Skeleton from "./Skeleton";
 
-const SKELETON_COLS = [
+const DEFAULT_COLS = [
   "col-xl-3 col-lg-4 col-md-6 col-12",
   "col-xl-3 col-lg-4 col-md-6 d-none d-md-block",
   "col-xl-3 col-lg-4 d-none d-lg-block",
   "col-xl-3 d-none d-xl-block",
 ];
 
-const NewItemsSkeletons = () => (
+const ItemSkeletons = ({ cols = DEFAULT_COLS }) => (
   <>
-    {SKELETON_COLS.map((cols, index) => (
-      <div className={cols} key={index}>
+    {cols.map((colsClass, index) => (
+      <div className={colsClass} key={index}>
         <div className="nft__item">
           <div className="author_list_pp">
             <Skeleton width="50px" height="50px" borderRadius="50%" />
@@ -33,4 +33,4 @@ const NewItemsSkeletons = () => (
   </>
 );
 
-export default NewItemsSkeletons;
+export default ItemSkeletons;
