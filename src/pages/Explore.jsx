@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import SubHeader from "../images/subheader.jpg";
 import ExploreItems from "../components/explore/ExploreItems";
 
+
 const Explore = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +32,10 @@ const Explore = () => {
 
         <section aria-label="section">
           <div className="container">
-            <div className="row">
+            <div
+              className="row"
+              data-aos="zoom-in"
+            >
               <ExploreItems />
             </div>
           </div>
